@@ -24,7 +24,6 @@ func main() {
 				updatedCounter = readCounter + 1
 				success = atomic.CompareAndSwapInt64(&counter, readCounter, updatedCounter)
 				counter = updatedCounter
-				break
 			}
 			fmt.Println(my_id)
 		}()

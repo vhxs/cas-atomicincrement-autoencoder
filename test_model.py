@@ -22,7 +22,7 @@ def test_model(threshold):
         flip = random()
 
         # real data
-        if flip > 0.5:
+        if flip > 0.95:
             real = True
             proc = run(["./main"], stdout=PIPE)
             permutation = torch.Tensor([int(n) for n in proc.stdout.decode("utf8").split()])
